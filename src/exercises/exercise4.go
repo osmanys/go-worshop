@@ -1,30 +1,29 @@
 package exercises
 
 type Person interface {
-  Pay()
+	Pay(prize float64) float64
 }
 
 type Jubilado struct {
- name string 
+	name string
 }
 
 type Normal struct {
-  Jubilado
+	Jubilado
 }
 
 type Invitado struct {
-  Jubilado
+	Jubilado
 }
 
-func (p Jubilado) Pay(prize int) int{
-  return 0.75 * prize
+func (p Jubilado) Pay(prize float64) float64 {
+	return 0.75 * prize
 }
 
-func (p Normal) Pay(prize int) int{
-  return prize
+func (p Normal) Pay(prize float64) float64 {
+	return prize
 }
 
-func (p Invitado) Pay(prize int) int{
-  return 0
+func (p Invitado) Pay(prize float64) float64 {
+	return 0
 }
-
