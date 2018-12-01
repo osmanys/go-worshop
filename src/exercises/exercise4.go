@@ -5,19 +5,19 @@ type Person interface {
 	Pay(prize float64) float64
 }
 
-// Jubilado person struct
-type Jubilado struct {
-	name string
-}
-
 // Normal person struct
 type Normal struct {
-	Jubilado
+	Name string
+}
+
+// Jubilado person struct
+type Jubilado struct {
+	Name string
 }
 
 // Invitado person struct
 type Invitado struct {
-	Jubilado
+	Name string
 }
 
 // Pay Jubilado func
